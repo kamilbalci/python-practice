@@ -1,4 +1,15 @@
-# My First Repo
-This is a repository where I am practicing my terminal skils, Python, and Git pushing!
+# My Python Practice Space
+This is my personal development repository! This is a space where I am actively practicing my terminal skills, core Python logic, and Git version control workflows ect...
 
-<img width="736" height="414" alt="image" src="https://github.com/user-attachments/assets/c80437cc-a6d8-48f6-830f-5f6bce4b2478" />
+## Projects Inside (So far)
+
+### 1. FuzzBuzz Engine (`/daily_practice`)
+A terminal-based Python tool that builds on the classic FizzBuzz logic by incorporating:
+* **Custom ranges:** Dynamic user inputs for loop boundaries.
+* **Print limits:** Specific start/stop visibility constraints.
+* (Coming soon!) **Error handling:** Robust `try/except` blocks to clean up typos and invalid characters (like commas or letters) dynamically.
+
+## Tech Stack & Tools
+* **Language:** Python 3
+* **Environment:** Ubuntu Linux Terminal
+* **Version Control:** Git & GitHub
