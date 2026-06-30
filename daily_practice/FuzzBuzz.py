@@ -20,13 +20,24 @@ if toggle_choice in ["yes", "y"]:
     while True:
         try:
             print_start = int(input("Start printing from number: "))
-            break
+
+            if start_num <= print_start <= end_num:
+                break
+            else:
+                print("Please enter a start number within the range.")
+
         except ValueError:
             print("Please enter an integer number and try again.")
+
     while True:
         try:
             print_end = int(input("Stop printing at number: "))
-            break
+
+            if print_start <= print_end <= end_num:
+                break
+            else:
+                print("Please enter a end number within the range.")
+
         except ValueError:
             print("Please enter an integer number and try again.")
 
@@ -40,7 +51,7 @@ Regular_count = 0
 for num in range(start_num, end_num + 1):
 # Check if a specific number is allowed to print
     should_print = (toggle_choice not in ["yes", "y"]) or (print_start <= num <= print_end)
-    if num % 3 == 0 and num % 5 == 0:
+    if num % 15 == 0:
         if should_print:
             print("FuzzBuzz")
         FuzzBuzz_count += 1 # Add 1 to FuzzBuzz tally
@@ -63,3 +74,10 @@ print("FuzzBuzz showed up:", FuzzBuzz_count, "times")
 print("Fuzz showed up:", Fuzz_count, "times")
 print("Buzz showed up:", Buzz_count, "times")
 print("Regular showed up:", Regular_count, "times")
+print("Total numbers processed:", end_num - start_num + 1)
+if toggle_choice in ["yes", "y"]:
+    print("Total numbers printed:", print_end - print_start + 1)
+elif toggle_choice in ["no", "n"]:
+    print("Total numbers printed:", end_num - start_num + 1)
+else:
+    print("Total numbers printed: N/A")
