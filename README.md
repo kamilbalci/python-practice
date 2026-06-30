@@ -7,7 +7,8 @@ This is my personal development repository! This is a space where I am actively 
 A terminal-based Python tool that builds on the classic FizzBuzz logic by incorporating:
 * **Custom ranges:** Dynamic user inputs for loop boundaries.
 * **Print limits:** Specific start/stop visibility constraints.
-* (Coming soon!) **Error handling:** Robust `try/except` blocks to clean up typos and invalid characters (like commas or letters) dynamically.
+* **Error handling:** Robust `try/except` blocks to clean up typos and invalid characters (like commas or letters) dynamically.
+* (Coming soon!) **Data Visualization** Bar plot generation (maybe using R) of the frequency of the occurrence of "FuzzBuzz", "Fuzz", "Buzz", and regular numbers using the in code counter variables. 
 
 ## Tech Stack & Tools
 * **Language:** Python 3

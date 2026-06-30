@@ -1,14 +1,34 @@
 # Daily python practice/ challenge
 
-# Ask the user for the start and stop numbers 
-start_num = int(input("Enter the starting number: "))
-end_num = int(input("Enter the ending number: "))
+# Ask the user for the start and stop numbers
+while True:
+    try:
+        start_num = int(input("Enter the starting number: "))
+        break
+    except ValueError:
+        print("Please enter an integer number and try again.")
+while True:
+    try:
+        end_num = int(input("Enter the ending number: "))
+        break
+    except ValueError:
+        print("Please enter an integer number and try again.")
 
 # Ask user if they want to limit  what prints to the screen
 toggle_choice = input("Do you want to limit what print? (yes/no): ").lower()
-if toggle_choice == "yes":
-    print_start = int(input("Start printing from number: "))
-    print_end = int(input("Stop printing at number: "))
+if toggle_choice in ["yes", "y"]:
+    while True:
+        try:
+            print_start = int(input("Start printing from number: "))
+            break
+        except ValueError:
+            print("Please enter an integer number and try again.")
+    while True:
+        try:
+            print_end = int(input("Stop printing at number: "))
+            break
+        except ValueError:
+            print("Please enter an integer number and try again.")
 
 # Counter Room
 FuzzBuzz_count = 0
@@ -19,7 +39,7 @@ Regular_count = 0
 # Operation Engine
 for num in range(start_num, end_num + 1):
 # Check if a specific number is allowed to print
-    should_print = (toggle_choice != "yes") or (print_start <= num <= print_end)
+    should_print = (toggle_choice not in ["yes", "y"]) or (print_start <= num <= print_end)
     if num % 3 == 0 and num % 5 == 0:
         if should_print:
             print("FuzzBuzz")
