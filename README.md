@@ -8,7 +8,8 @@ A terminal-based Python tool that builds on the classic FizzBuzz logic by incorp
 * **Custom ranges:** Dynamic user inputs for loop boundaries.
 * **Print limits:** Specific start/stop visibility constraints.
 * **Error handling:** Robust `try/except` blocks to clean up typos and invalid characters (like commas or letters) dynamically.
-* (Coming soon!) **Data Visualization** Bar plot generation (maybe using R) of the frequency of the occurrence of "FuzzBuzz", "Fuzz", "Buzz", and regular numbers using the in code counter variables. 
+* **Data Visualization** Bar plot generation of the frequency of the occurrence of "FuzzBuzz", "Fuzz", "Buzz", and regular numbers using the in code counter variables. Also, included is scaling or the bar plot.
+* **Coming Soon!** Flushing out the bar plot by spacing the bars away from each other and also showing the number next to the name, giving user control to print bar plot and the 'max_width' varible, some statistics ect...
 
 ## Tech Stack & Tools
 * **Language:** Python 3
