@@ -81,3 +81,17 @@ elif toggle_choice in ["no", "n"]:
     print("Total numbers printed:", end_num - start_num + 1)
 else:
     print("Total numbers printed: N/A")
+
+# Data Visualization
+max_count = max(FuzzBuzz_count, Fuzz_count, Buzz_count, Regular_count)
+max_width = 25
+
+FuzzBuzz_bar = int((FuzzBuzz_count / max_count) * max_width)
+Fuzz_bar = int((Fuzz_count / max_count) * max_width)
+Buzz_bar = int((Buzz_count / max_count) * max_width)
+Regular_bar = int((Regular_count / max_count) * max_width)
+
+print(f"{'FuzzBuzz':<12}: {'█' * FuzzBuzz_bar}")
+print(f"{'Fuzz':<12}: {'█' * Fuzz_bar}")
+print(f"{'Buzz':<12}: {'█' * Buzz_bar}")
+print(f"{'Regular':<12}: {'█' * Regular_bar}")
