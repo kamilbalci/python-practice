@@ -69,7 +69,7 @@ for num in range(start_num, end_num + 1):
         Regular_count += 1 # Add 1 to Regular tally
 
 # Scores
-print("--- FINAL SCORES ---")
+print("\n --- FINAL SCORES --- \n")
 print("FuzzBuzz showed up:", FuzzBuzz_count, "times")
 print("Fuzz showed up:", Fuzz_count, "times")
 print("Buzz showed up:", Buzz_count, "times")
@@ -83,6 +83,8 @@ else:
     print("Total numbers printed: N/A")
 
 # Data Visualization
+print("\n --- DATA VISUALIZATION --- \n")
+
 max_count = max(FuzzBuzz_count, Fuzz_count, Buzz_count, Regular_count)
 max_width = 25
 
@@ -91,7 +93,14 @@ Fuzz_bar = int((Fuzz_count / max_count) * max_width)
 Buzz_bar = int((Buzz_count / max_count) * max_width)
 Regular_bar = int((Regular_count / max_count) * max_width)
 
-print(f"{'FuzzBuzz':<12}: {'█' * FuzzBuzz_bar}")
-print(f"{'Fuzz':<12}: {'█' * Fuzz_bar}")
-print(f"{'Buzz':<12}: {'█' * Buzz_bar}")
-print(f"{'Regular':<12}: {'█' * Regular_bar}")
+FuzzBuzz_bar_label = f"FuzzBuzz ({FuzzBuzz_count})"
+print(f"{FuzzBuzz_bar_label :<12}: {'█' * FuzzBuzz_bar} \n")
+
+Fuzz_bar_label = f"Fuzz ({Fuzz_count})"
+print(f"{Fuzz_bar_label :<12}: {'█' * Fuzz_bar} \n")
+
+Buzz_bar_label = f"Buzz ({Buzz_count})"
+print(f"{Buzz_bar_label :<12}: {'█' * Buzz_bar} \n")
+
+Regular_bar_label = f"Regular ({Regular_count})"
+print(f"{Regular_bar_label :<12}: {'█' * Regular_bar} \n")
