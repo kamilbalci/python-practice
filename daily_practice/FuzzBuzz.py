@@ -46,6 +46,7 @@ FuzzBuzz_count = 0
 Fuzz_count = 0
 Buzz_count = 0
 Regular_count = 0
+Total_count = end_num - start_num + 1
 
 # Operation Engine
 for num in range(start_num, end_num + 1):
@@ -74,11 +75,11 @@ print("FuzzBuzz showed up:", FuzzBuzz_count, "times")
 print("Fuzz showed up:", Fuzz_count, "times")
 print("Buzz showed up:", Buzz_count, "times")
 print("Regular showed up:", Regular_count, "times")
-print("Total numbers processed:", end_num - start_num + 1)
+print("Total numbers processed:", Total_count)
 if toggle_choice in ["yes", "y"]:
     print("Total numbers printed:", print_end - print_start + 1)
 elif toggle_choice in ["no", "n"]:
-    print("Total numbers printed:", end_num - start_num + 1)
+    print("Total numbers printed:", Total_count)
 else:
     print("Total numbers printed: N/A")
 
@@ -104,3 +105,16 @@ print(f"{Buzz_bar_label :<12}: {'█' * Buzz_bar} \n")
 
 Regular_bar_label = f"Regular ({Regular_count})"
 print(f"{Regular_bar_label :<12}: {'█' * Regular_bar} \n")
+
+# Statistics engine
+print("--- STATISTICS --- \n")
+
+FuzzBuzz_pct = (FuzzBuzz_count / ((end_num - start_num) +1)) * 100
+Fuzz_pct = (Fuzz_count / ((end_num - start_num) +1)) * 100
+Buzz_pct = (Buzz_count / ((end_num - start_num) +1)) * 100
+Regular_pct = (Regular_count / Total_count) * 100
+
+print(f"{'FuzzBuzz Percentage' :<21}: {FuzzBuzz_pct:.2f}%")
+print(f"{'Fuzz Percentage' :<21}: {Fuzz_pct:.2f}%")
+print(f"{'Buzz Percentage' :<21}: {Buzz_pct:.2f}%")
+print(f"{'Regular Percentage' :<21}: {Regular_pct:.2f}%")
